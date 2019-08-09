@@ -15,3 +15,7 @@ void test_colors(void) {
 	}
 	textbackground(BLACK);
 }
+
+int generate_movement(void) {
+	return rand() % 4;
+}

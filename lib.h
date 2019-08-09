@@ -11,4 +11,4 @@
 #include "lib/ll.h"
 #include "lib/ll.c"
 
-#include "game/init.c"
+#include "game/iterations.c"
