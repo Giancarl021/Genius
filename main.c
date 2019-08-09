@@ -12,6 +12,8 @@
 
 int main() {
 	drawBase();	
+	
+	
 	gotoxy(1, base_dim.height);
 	printf("\n");
 	textbackground(BLACK);
