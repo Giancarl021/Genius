@@ -13,3 +13,7 @@ void dim_fillArea(Dim area, int x, int y, int color) {
 		}
 	}
 }
+
+Coord coord_setPosition(int x, int y) {
+	return (Coord){x, y}
+}

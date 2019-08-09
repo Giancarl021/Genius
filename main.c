@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define base_dim (Dim){40, 20}
+#define base_dim (Dim){38, 19}
 
 #include "lib/conio.h"
 #include "lib/conio.c"
@@ -11,9 +11,7 @@
 #include "lib/draw.c"
 
 int main() {
-	drawBase();	
-	
-	
+	drawBase();
 	gotoxy(1, base_dim.height);
 	printf("\n");
 	textbackground(BLACK);
