@@ -6,3 +6,12 @@ void set_cursor(char visibility[]) {
 	else info.bVisible = TRUE;
 	SetConsoleCursorInfo(handle, &info);
 }
+
+void test_colors(void) {
+	int i;
+	for(i = 0; i < 16; i++) {
+		textbackground(i);
+		printf("  ");
+	}
+	textbackground(BLACK);
+}

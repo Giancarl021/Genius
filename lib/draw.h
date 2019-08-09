@@ -21,8 +21,8 @@ Tile tiles[4] = {
 	{
 		{16, 8},
 		{3, 11},
-		YELLOW,
-		MAGENTA
+		BROWN,
+		YELLOW
 	},
 	{
 		{16, 8},
