@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 
 #define base_dim (Dim){38, 19}
 
-#include "lib/conio.h"
-#include "lib/conio.c"
-#include "lib/dim.h"
-#include "lib/dim.c"
-#include "lib/draw.h"
-#include "lib/draw.c"
+#include "lib_load.h"
 
 int main() {
-	drawBase();
+	char *c;
+	set_cursor("hide");
+	draw_base();
+	animate_tile(tile_dim, tile_coords[0], GREEN, LIGHTGREEN, notes[0]);
 	gotoxy(1, base_dim.height);
 	printf("\n");
 	textbackground(BLACK);
+	set_cursor("show");
 }

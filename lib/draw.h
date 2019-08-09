@@ -7,6 +7,6 @@ Coord tile_coords[4] = {
 
 Dim tile_dim = {16, 8};
 
-void drawBase(void);
+void draw_base(void);
 
-void drawTile(/* TODO */);
+void draw_tile(/* TODO */);
