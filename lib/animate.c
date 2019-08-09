@@ -1,5 +1,11 @@
-void animate_tile(Dim dimension, Coord coordinates, int color, int blink_color, int sound_frequency) {
-	draw_tile(dimension, coordinates, blink_color);
+void animate_tile(Tile tile, int sound_frequency) {
+	set_cursor("hide");
+	
+	Tile blink_tile = tile;
+	blink_tile.color = blink_tile.blink_color;
+	draw_tile(blink_tile);
 	Beep(sound_frequency, ani_delay);
-	draw_tile(dimension, coordinates, color);
+	draw_tile(tile);
+	
+	set_cursor("show");
 }

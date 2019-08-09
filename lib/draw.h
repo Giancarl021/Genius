@@ -1,12 +1,38 @@
-Coord tile_coords[4] = {
-	{3, 2}, // Green
-	{21, 2}, // Red
-	{3, 11}, // Yellow
-	{21, 11} // Blue
-};
+typedef struct {
+	Dim dimension;
+	Coord coordinates;
+	int color;
+	int blink_color;
+} Tile;
 
-Dim tile_dim = {16, 8};
+Tile tiles[4] = {
+	{
+		{16, 8},
+		{3, 2},
+		GREEN,
+		LIGHTGREEN
+	},
+	{
+		{16, 8},
+		{21, 2},
+		RED,
+		LIGHTRED
+	},
+	{
+		{16, 8},
+		{3, 11},
+		YELLOW,
+		MAGENTA
+	},
+	{
+		{16, 8},
+		{21, 11},
+		BLUE,
+		LIGHTBLUE
+		
+	}
+};
 
 void draw_base(void);
 
-void draw_tile(/* TODO */);
+void draw_tile(Tile tile);

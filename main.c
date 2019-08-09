@@ -8,11 +8,10 @@
 
 int main() {
 	char *c;
-	set_cursor("hide");
 	draw_base();
-	animate_tile(tile_dim, tile_coords[0], GREEN, LIGHTGREEN, notes[0]);
+	int i;
+	for(i = 0; i < 4; i++) animate_tile(tiles[i], notes[i]);
 	gotoxy(1, base_dim.height);
 	printf("\n");
 	textbackground(BLACK);
-	set_cursor("show");
 }

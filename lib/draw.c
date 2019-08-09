@@ -4,10 +4,10 @@ void draw_base(void) {
 	fill_area(base_dim, (Coord){1,1}, WHITE);
 	
 	for(i = 0; i < 4; i++) {
-		draw_tile(tile_dim, tile_coords[i], color[i]);
+		draw_tile(tiles[i]);
 	}
 }
 
-void draw_tile(Dim dimension, Coord coordinates, int color) {
-	fill_area(dimension, coordinates, color);
+void draw_tile(Tile tile) {
+	fill_area(tile.dimension, tile.coordinates, tile.color);
 }
