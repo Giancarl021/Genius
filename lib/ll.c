@@ -69,15 +69,28 @@ int ll_lenght(List *ref) {
 	return cc;
 }
 
-void ll_remove(List *ref, int index) {
-	List *node = ll_get(ref, index);
+List* ll_remove(List *ref, int index) {
 	if(index > 0) {
+		List *node = ll_get(ref, index);
 		List *prev = ll_get(ref, index - 1);
 		prev->next = ll_get(ref, index + 1);
 		free(node);
+		return ref;
 	} else if(index == 0) {
-		List *node = ref;
-		(*ref) = (*ref->next);
-		free(node);
+		List *node = ref->next;
+		free(ref);
+		return node;
 	}
+}
+
+List* ll_clear(List *ref) {
+	List *current = ref;
+	List *next;
+	
+	while(current != NULL) {
+		next = current->next;
+		free(current);
+		current = next;
+	}
+	return NULL;
 }

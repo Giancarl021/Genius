@@ -21,4 +21,6 @@ List* ll_get(List *ref, int index);
 
 int ll_lenght(List *ref);
 
-void ll_remove(List *ref, int index);
+List* ll_remove(List *ref, int index);
+
+List* ll_clear(List *ref);
