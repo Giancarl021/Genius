@@ -10,3 +10,5 @@
 #include "lib/animate.c"
 #include "lib/ll.h"
 #include "lib/ll.c"
+
+#include "game/init.c"

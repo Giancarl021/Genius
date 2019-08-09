@@ -10,15 +10,15 @@ int main() {
 	
 	set_cursor("hide");
 	draw_base();
-	int i;
-	for(i = 0; i < 4; i++) animate_tile(tiles[i], notes[i]);
-	// Finalização
+	bool exit = false;
+	
+	
 	gotoxy(1, base_dim.height);
 	printf("\n");
 	textbackground(BLACK);
 	set_cursor("show");
-}
-
-void init(void) {
-	List *jogadas;
+	
+	while(!exit) {
+		exit = initMatch();
+	}
 }

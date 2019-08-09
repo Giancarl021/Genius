@@ -17,16 +17,12 @@ List* ll_createFirstNode(int element) {
 	return node;
 }
 
-void ll_push(List *ref, int element) {
+List* ll_push(List *ref, int element) {
 	List *node = ll_createNode();
-	List *tmp = ll_createNode();
-	
-	tmp->data = ref->data;
-	tmp->next = ref->next;
 	
 	node->data = element;
-	node->next = tmp;
-	(*ref) = (*node);
+	node->next = ref;
+	return node;
 }
 
 void ll_add(List *ref, int element) {

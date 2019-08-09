@@ -11,7 +11,7 @@ List* ll_createNode(void);
 
 List* ll_createFirstNode(int element);
 
-void ll_push(List *ref, int element);
+List* ll_push(List *ref, int element);
 
 void ll_add(List *ref, int element);
 
