@@ -23,6 +23,7 @@ int main() {
 	
 		ll_add(movements, generate_movement());
 		animateMovements(movements);
+		
 		Sleep(600);
 		exit++;
 	}
