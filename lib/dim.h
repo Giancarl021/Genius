@@ -10,6 +10,6 @@ typedef struct {
 
 Dim dim_setSize(int width, int height);
 
-void dim_fillArea(Dim area, int x, int y, int color);
+void fill_area(Dim area, Coord coordinates, int color);
 
 Coord coord_setPosition(int x, int y);

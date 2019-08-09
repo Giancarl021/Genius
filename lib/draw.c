@@ -1,7 +1,13 @@
 void drawBase(void) {
-	dim_fillArea(base_dim, 1, 1, WHITE);
-	dim_fillArea(tile_dim, tile_coords[0].x, tile_coords[0].y, GREEN);
-	dim_fillArea(tile_dim, tile_coords[1].x, tile_coords[1].y, RED);
-	dim_fillArea(tile_dim, tile_coords[2].x, tile_coords[2].y, YELLOW);
-	dim_fillArea(tile_dim, tile_coords[3].x, tile_coords[3].y, BLUE);
+	int i, color[4] = {GREEN, RED, YELLOW, BLUE};
+	
+	fill_area(base_dim, (Coord){1,1}, WHITE);
+	
+	for(i = 0; i < 4; i++) {
+		drawTile(tile_dim, tile_coords[i], color[i]);
+	}
+}
+
+void drawTile(Dim dimension, Coord coordinates, int color) {
+	fill_area(dimension, coordinates, color);
 }
