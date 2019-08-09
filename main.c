@@ -32,4 +32,6 @@ int main() {
 	printf("\n");
 	textbackground(BLACK);
 	set_cursor("show");
+	
+	return 0;
 }
