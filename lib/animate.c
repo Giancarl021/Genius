@@ -7,3 +7,13 @@ void animate_tile(Tile tile, int sound_frequency) {
 	draw_tile(tile);
 //	set_cursor("show");
 }
+
+void animate_movements(List *movements) {
+	while(movements != NULL) {
+		int index = movements->data;
+		if(index != -1) {
+			animate_tile(tiles[index], notes[index]);
+		}
+		movements = movements->next;
+	}
+}
