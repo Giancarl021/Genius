@@ -27,14 +27,15 @@ int select_options(DText *options[], int dtext_arr_size, Coord position) {
 		choice = getch() - 48;
 		if((choice < 0 || choice > l - 1) && !choice_err) {
 			textcolor(DARKGRAY);
-			printf("\nEscolha um valor dentro dos limites");
+			printf("[!] Escolha um valor dentro dos limites");
 			choice_err = true;
 		}
 	} while(choice < 0 || choice > l - 1);
 	if(choice_err) {
-		gotoxy(position.x, position.y + l + 1);
+		gotoxy(position.x, position.y + l);
 		printf("                                         ");
 	}
+	
 	int index = choice == 0 ? l - 1 : choice - 1, color = options[index]->color;
 	
 	options[index]->color = WHITE;
@@ -42,9 +43,12 @@ int select_options(DText *options[], int dtext_arr_size, Coord position) {
 	draw_dtext(options[index]);
 	if(index != l - 1) {
 		animate_tile(tiles[index], notes[index]);
+	} else {
+		Sleep(200);
 	}
 	options[index]->color = color;
 	gotoxy(position.x, position.y + index);
 	draw_dtext(options[index]);
+	
 	return choice;
 }

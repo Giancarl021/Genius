@@ -8,8 +8,8 @@ typedef struct {
 	int y;
 } Coord;
 
-Dim dim_setSize(int width, int height);
+Dim dim_set_size(int width, int height);
 
 void fill_area(Dim area, Coord coordinates, int color);
 
-Coord coord_setPosition(int x, int y);
+Coord coord_set_position(int x, int y);

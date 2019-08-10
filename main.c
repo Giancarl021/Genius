@@ -16,9 +16,9 @@ int main() {
 	}
 	
 	gotoxy(1, base_dim.height + 5);
-	printf("\n");
 	textbackground(BLACK);
+	textcolor(LIGHTGRAY);
+	printf("\n");
 	set_cursor("show");
-	
 	return 0;
 }

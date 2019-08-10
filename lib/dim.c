@@ -1,4 +1,4 @@
-Dim dim_setSize(int width, int height) {
+Dim dim_set_size(int width, int height) {
 	return (Dim){width, height};
 }
 
@@ -15,6 +15,6 @@ void fill_area(Dim area, Coord coordinates, int color) {
 	textbackground(BLACK);
 }
 
-Coord coord_setPosition(int x, int y) {
+Coord coord_set_position(int x, int y) {
 	return (Coord){x, y};
 }

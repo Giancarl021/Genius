@@ -19,7 +19,7 @@ void ll_insert(List *ref, int element);
 
 List* ll_get(List *ref, int index);
 
-int ll_lenght(List *ref);
+int ll_length(List *ref);
 
 List* ll_remove(List *ref, int index);
 

@@ -56,7 +56,7 @@ List* ll_get(List *ref, int index) {
 	return ref;
 }
 
-int ll_lenght(List *ref) {
+int ll_length(List *ref) {
 	int cc = 0;
 	while(ref != NULL) {
 		cc++;
