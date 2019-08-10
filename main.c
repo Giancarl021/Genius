@@ -7,7 +7,6 @@
 #include "lib.h"
 
 int main() {
-	
 	set_cursor("hide");
 	draw_base();
 	bool exit = false;

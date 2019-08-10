@@ -5,6 +5,11 @@ typedef struct {
 	int blink_color;
 } Tile;
 
+typedef struct {
+	char *text;
+	int color;
+} DText;
+
 Tile tiles[4] = {
 	{
 		{16, 8},
@@ -29,10 +34,17 @@ Tile tiles[4] = {
 		{21, 11},
 		BLUE,
 		LIGHTBLUE
-		
 	}
 };
 
 void draw_base(void);
 
 void draw_tile(Tile tile);
+
+DText *new_dtext(const char* text, int color);
+
+void draw_dtext(DText *dtext);
+
+void destroy_dtext(DText *dtext);
+
+int draw_options(DText *options[], int dtext_arr_size);
