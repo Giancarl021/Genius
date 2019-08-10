@@ -9,24 +9,25 @@ bool match(void) {
 		ll_add(movements, generate_movement());
 		animate_movements(movements);
 		textbackground(BLACK);
-		Sleep(600);
-		gotoxy(1, 25);
-		DText *arr[5] = {
+//		Sleep(600);
+		
+		DText *options[5] = {
 			new_dtext("[1] Verde\n", LIGHTGREEN),
 			new_dtext("[2] Vermelho\n", LIGHTRED),
 			new_dtext("[3] Amarelo\n", YELLOW),
 			new_dtext("[4] Azul\n", LIGHTBLUE),
 			new_dtext("[0] Desistir\n", MAGENTA)
 		};
-		selected_tile = draw_options(arr, sizeof(arr));
-		
-		int i, l = sizeof(arr) / 8;
-		for(i = 0; i < l; i++) {
-			destroy_dtext(arr[i]);
-		}
+
+		selected_tile = select_options(options, sizeof(options), (Coord){1, 20});
+//		printf("%d", selected_tile);
+//		int i, l = sizeof(options) / 8;
+//		for(i = 0; i < l; i++) {
+//			destroy_dtext(options[i]);
+//		}
 		
 		textcolor(LIGHTGRAY);
-		miss_tile = true;
+//		miss_tile = true;
 	}
 	return true;
 }

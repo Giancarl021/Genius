@@ -12,6 +12,7 @@ void fill_area(Dim area, Coord coordinates, int color) {
 			printf(" ");
 		}
 	}
+	textbackground(BLACK);
 }
 
 Coord coord_setPosition(int x, int y) {

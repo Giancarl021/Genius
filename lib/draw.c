@@ -30,10 +30,9 @@ void destroy_dtext(DText *dtext) {
 	free(dtext);
 }
 
-int draw_options(DText *options[], int dtext_arr_size) {
+void draw_options(DText *options[], int dtext_arr_size) {
 	int i;
 	for(i = 0; i < dtext_arr_size / 8; i++) {
 		draw_dtext(options[i]);
 	}
-	return i;
 }

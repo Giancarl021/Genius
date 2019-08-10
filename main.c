@@ -15,7 +15,7 @@ int main() {
 		exit = match();
 	}
 	
-	gotoxy(1, base_dim.height);
+	gotoxy(1, base_dim.height + 5);
 	printf("\n");
 	textbackground(BLACK);
 	set_cursor("show");

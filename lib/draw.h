@@ -47,4 +47,4 @@ void draw_dtext(DText *dtext);
 
 void destroy_dtext(DText *dtext);
 
-int draw_options(DText *options[], int dtext_arr_size);
+void draw_options(DText *options[], int dtext_arr_size);
