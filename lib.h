@@ -12,3 +12,4 @@
 #include "lib/animate.c"
 
 #include "game/match.c"
+#include "game/text.c"
