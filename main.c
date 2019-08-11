@@ -7,7 +7,7 @@
 #include "lib.h"
 
 int main() {
-	set_cursor("hide");
+	_setcursortype(_NOCURSOR);
 	draw_base();
 	bool exit = false;
 	
@@ -19,6 +19,6 @@ int main() {
 	textbackground(BLACK);
 	textcolor(LIGHTGRAY);
 	printf("\n");
-	set_cursor("show");
+	_setcursortype(_NORMALCURSOR);
 	return 0;
 }

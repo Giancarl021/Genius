@@ -1,3 +1,7 @@
 void animate_text(const char *text) {
-	printf("%d", text);
+	/* TODO
+	  Limpar Tela,
+	  Renderizar texto grande
+	  Renderizar partículas
+	*/
 }
