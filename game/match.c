@@ -22,7 +22,6 @@ bool match(void) {
 		int mov_length = ll_length(movements);
 		for(i = 1; i < mov_length; i++) {
 			selected_tile = select_options(options, sizeof(options), coord_set_position(1, base_dim.height + 1));
-//			printf("selected_tile = %d\nmovement[%d] = %d", selected_tile, i, ll_get(movements, i)->data);
 			if(selected_tile != ll_get(movements, i)->data + 1) {
 				selected_tile = 0;
 				break;
