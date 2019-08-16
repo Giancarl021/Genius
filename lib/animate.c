@@ -4,6 +4,7 @@ void animate_tile(Tile tile, int sound_frequency) {
 	draw_tile(blink_tile);
 	Beep(sound_frequency, ani_delay);
 	draw_tile(tile);
+	Sleep(100);
 }
 
 void animate_movements(List *movements) {
