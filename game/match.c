@@ -30,7 +30,7 @@ bool match(void) {
 		if(selected_tile == 0) {
 			break;
 		}
-		Sleep(600);
+		Sleep(400);
 	}
 	
 	for(i = 0; i < l; i++) {
